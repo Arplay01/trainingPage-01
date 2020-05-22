@@ -23,3 +23,4 @@ const createContent = (querySelectorContent, content) => {
 
 createContent('.section__footer--description--js', 'Właśnie kończę na dziś (napisane w js)')
 
+

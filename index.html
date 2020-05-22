@@ -122,16 +122,74 @@
         </article>
 
 
-        <section class="main__faq">
+        <section class="main__form">
             <h2>FAQ</h2>
             <p>albo ten inny do wyjasnień pojęć - pytań. To jest Spoko
             </p>
+            <form class="form">
+                <fieldset>
+                    <legend>Informacje kontaktowe</legend>
+                    <div>
+                        <label for="firstName">Twoje imię:</label>
+                        <input class="form__item" type="text" id="firstName" name="firstName" value="Imię">
+                    </div>
+                    <div>
+                        <label for="lastName">Twoje nazwisko:</label>
+                        <input class="form__item" type="text" name="lastName" id="lastName"
+                            placeholder="wpisz swoje nazwisko">
+                    </div>
+
+
+                    <div>
+                        <label for="email">email:</label>
+                        <input class="form__item" type="email" name="email" id="email" placeholder="example@mail.com">
+                    </div>
+
+                    <div>
+                        <label for="phone">Numer telefonu:</label>
+                        <input class="form__item" type="tel" name="phone" id="phone" placeholder="722625777">
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Twoje miejsce pracy</legend>
+
+                        <div>
+                            <label>
+                                <input class="" type="radio" name="workPlace" id="home">Dom</label>
+                        </div>
+                        <div>
+                            <label>
+                                <input class="" type="radio" name="workPlace" id="office">Office</label>
+                        </div>
+                        <div>
+                            <label>
+                                <input class="" type="radio" name="workPlace" id="other">Other</label>
+                        </div>
+            
+
+                    <label for="workTime">Jak długo pracujesz w ciągu dnia</label>
+                        <input class="" type="range" name="workTime" id="workTime"> 
+
+                </fieldset>
+
+
+
+
+
+
+
+            </form>
+
+
+
         </section>
 
     </main>
 
     <footer class="footer">
         <p class="footer__description">Made for practise</p>
+        jasjda
     </footer>
 
     <script src="main.js"></script>
