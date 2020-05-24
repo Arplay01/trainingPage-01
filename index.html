@@ -14,10 +14,10 @@
 
 <body>
     <header class="navigation__header">
-        <nav class="navigation">
+        <nav class="navigation navigation--js">
             <ul class="navigation__list">
                 <li class="navigation__item navigation__item--left"><a href=""><img src="img/eye_logo.png"
-                            alt="Logo na którym jest oko" class="logo__navigation"></a></li>
+                            alt="Logo na którym jest oko" class="logo__navigation"><span class="link-block logo-description__mobile-only">Strona główna</span></a></li>
                 <li class="navigation__item"> <a href="#why" class="link-block">Przyczyny</a></li>
                 <li class="navigation__item"><a href="#prevent" class="link-block">Zapobieganie</a></li>
                 <li class="navigation__item"><a href="#consultations" class="link-block">Konsultacje</a></li>
@@ -25,12 +25,14 @@
                 </li>
             </ul>
         </nav>
+        <button class="hamburger hamburger--js" aria-label="menu strony">👀</button> <!-- .navigation__show--js -->
     </header>
 
     <main class="main">
 
         <header class="main__header">
             <h1 class="main__heading main__heading--js">Zmęczone oczy</h1>
+            <button class="heading__button heading__button--js">Zmień nagłówek</button>
         </header>
 
         <article class="section section__why" id="why">
@@ -51,7 +53,7 @@
             </div>
             <footer class="section__footer">
                 <p class="section__footer--description section__footer--description--js">Lorem ipsum dolor sit amet.</p>
-                <p><a href="" class="section__footer--link section__footer--linkOrange">Dowiedz się więcej</a></p>
+                <p class="section__footer--description"><a href="" class="section__footer--link section__footer--linkOrange">Dowiedz się więcej</a></p>
             </footer>
         </article>
 
@@ -73,7 +75,7 @@
             </div>
             <footer class="section__footer">
                 <p class="section__footer--description">Lorem ipsum dolor sit amet.</p>
-                <p><a href="" class="section__footer--link section__footer--linkPurple">Dowiedz się więcej</a></p>
+                <p class="section__footer--description"><a href="" class="section__footer--link section__footer--linkPurple">Dowiedz się więcej</a></p>
             </footer>
         </article>
 
@@ -95,7 +97,7 @@
             </div>
             <footer class="section__footer">
                 <p class="section__footer--description">Lorem ipsum dolor sit amet.</p>
-                <p><a href="" class="section__footer--link section__footer--linkGreen">Dowiedz się więcej</a></p>
+                <p class="section__footer--description"><a href="" class="section__footer--link section__footer--linkGreen">Dowiedz się więcej</a></p>
             </footer>
         </article>
 
@@ -117,16 +119,15 @@
             </div>
             <footer class="section__footer">
                 <p class="section__footer--description">Lorem ipsum dolor sit amet.</p>
-                <p><a href="" class="section__footer--link section__footer--linkRed">Dowiedz się więcej</a></p>
+                <p class="section__footer--description"><a href="" class="section__footer--link section__footer--linkRed">Dowiedz się więcej</a></p>
             </footer>
         </article>
-
-
+        
         <section class="main__form">
             <h2>FAQ</h2>
             <p>albo ten inny do wyjasnień pojęć - pytań. To jest Spoko
             </p>
-            <form class="form">
+            <form method="POST" class="form" action="https://dev.cotenfrontend.pl">
                 <fieldset>
                     <legend>Informacje kontaktowe</legend>
                     <div>
@@ -154,30 +155,54 @@
                 <fieldset>
                     <legend>Twoje miejsce pracy</legend>
 
-                        <div>
-                            <label>
-                                <input class="" type="radio" name="workPlace" id="home">Dom</label>
-                        </div>
-                        <div>
-                            <label>
-                                <input class="" type="radio" name="workPlace" id="office">Office</label>
-                        </div>
-                        <div>
-                            <label>
-                                <input class="" type="radio" name="workPlace" id="other">Other</label>
-                        </div>
-            
+                    <div>
+                        <label>
+                            <input class="" type="radio" name="workPlace" id="home">Dom</label>
+                    </div>
+                    <div>
+                        <label>
+                            <input class="" type="radio" name="workPlace" id="office">Biuro</label>
+                    </div>
+                    <div>
+                        <label>
+                            <input class="" type="radio" name="workPlace" id="other">Inne</label>
+                    </div>
 
-                    <label for="workTime">Jak długo pracujesz w ciągu dnia</label>
-                        <input class="" type="range" name="workTime" id="workTime"> 
-
+                    <div>
+                        <label for="workTime">Jak długo pracujesz w ciągu dnia</label>
+                        <input class="form__item range--js" type="range" name="workTime" id="workTime" min="0" max="12">
+                    </div>
+                    <div>
+                        <label for="workTimes">Jak długo pracujesz w ciągu dnia:</label>
+                        <input class="form__item--number" type="number" name="workTimes" id="workTimes" min="0" max="12">
+                    </div>
+                    <div>
+                        <label for="password">Wpisz hasło</label>
+                            <input class="form__item" type="password" name="password" id="password">
+                    </div>
+                    <div>
+                        <label>
+                            <input class="" type="checkbox" name="agreement" id="agreement" checked>Zgadzam się</label>
+                    </div>
+                    <div class="removeOnMobile">
+                        <label for="file">Prześlij plik:</label>
+                            <input class="" type="file" name="file" id="file">
+                    </div>
                 </fieldset>
 
-
-
-
-
-
+                <div>
+                    <label for="band">Wybierz ulubiony zespół</label>
+                        <select name="band" id="band">
+                            <option value="redhot">Red Hot chilli Peppers</option>
+                            <option value="aerosmith">Angix na tajwanie</option>
+                            <option value="best">Hello best band</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="text">o Tobie</label>
+                            <textarea name="text" id="text" cols="30" rows="10"></textarea>
+                    </div>
+                    <div><input type="submit" name="finaaAgree" value="wyślij"></div>
 
             </form>
 
